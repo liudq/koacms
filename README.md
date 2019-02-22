@@ -1,4 +1,4 @@
-# koacms
+# koacms 内容管理系统框架
 koa + node + mongodb
 
 内容管理系统：
