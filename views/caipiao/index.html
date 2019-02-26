@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>首页</title>
+    <style>
+      body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd{
+          margin: 0;
+          padding: 0;
+          font-size: 14px;
+          font-family: "Microsoft Yahei",sans-serif;
+          color: #333;
+          list-style: none;
+          cursor: default;
+      }
+
+      html,body{
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+      }
+
+      input,img{
+          margin: 0;
+          padding: 0;
+          border: 0 none;
+          outline-style: none;
+          vertical-align: bottom;
+      }
+      a,a:active,a:visited{
+          /*下划线和颜色*/
+          text-decoration: none;
+          color: #333;
+      }
+      a:hover{
+          color:#111;
+      }
+
+      .float-l {
+          float: left;
+      }
+      .float-r {
+          float: right;
+      }
+      /* 使用伪元素清除浮动 */
+      .clearfix::before,
+      .clearfix::after{
+          content:"";
+          height: 0;
+          line-height: 0;
+          display: block;
+          visibility: none;
+          clear: both;
+      }
+
+      .clearfix {
+          *zoom: 1;
+      }
+      .container {
+          width: 100%;
+          margin: 0 auto;
+          text-align: center
+      }
+      .top-wrap {
+          border: 1px solid #dadbdb;
+          background: #f3f2f2;
+          height: 28px;
+          line-height: 28px;
+      }
+      .top-wrap span {
+          padding: 6px;
+      }
+      .left {
+          width: 170px;
+      }
+      .center {
+          margin-left: 170px;
+          margin-right: 120px;
+          height: 100%;
+          font-size: 16px;
+          text-align: left;
+          overflow: hidden;
+          background-color: #ffffcc;
+          position: relative;
+      }
+      .center .scroll-words {
+          position: absolute;
+          left: 0;
+          top: 0;
+      }
+      .right {
+          width: 120px
+      }
+      .left span {
+          border-right: 1px solid #dadbdb
+      }
+      .right span {
+          border-left: 1px solid #dadbdb;
+      }
+      .block-wrap {
+         border: 2px solid #333;
+         border-bottom: 0;
+         border-right: 0;
+      }
+      .block-wrap .block {
+          background: #eee;
+          border-right: 2px solid #333;
+          border-bottom: 2px solid #333;
+          height: auto;
+      }
+      .block-tit{
+          height: 28px;
+          padding: 0 6px;
+          line-height: 28px;
+          border-bottom: 1px solid #333;
+          background: #fff;
+      }
+      .block-tit .tit-l {
+          color: blue;
+          font-size: 14px;
+      }
+      .block-tit .tit-r {
+          color: red;
+          font-size: 14px;
+      }
+      .one-wrap {
+          width: 100%;
+      }
+      .block .one {
+          display: block;
+          border: 1px solid rgb(172, 170, 170);
+          background: rgb(187, 186, 186);
+          
+      }
+      .block .one span {
+        display: block;
+        color: #fff
+      }
+      .block .active {
+          background: red;
+          border-color: rgb(250, 67, 67)
+      }
+      .block .active span{
+        color: yellow
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+          <!-- 顶部 start -->
+        <div class="top-wrap clearfix">
+             <!-- 顶部右侧 start -->
+          <div class="right float-r clearfix">
+            <div class="float-l right-l">
+                <span>139</span>
+            </div>
+            <div class="float-l right-r">
+                <span>销售 0:32</span>
+            </div>
+          </div>
+            <!-- 顶部右侧 end -->
+            <!-- 顶部左侧 start -->
+          <div class="left float-l clearfix">
+            <div class="float-l left-l">
+                <span>20:39:33</span>
+            </div>
+            <div class="float-l left-c">
+                <span>1</span>
+            </div>
+            <div class="float-l left-r">
+                <span>20190226</span>
+            </div>
+          </div>
+          <!-- 顶部左侧 end -->
+          <!-- 顶部中间 滚动 start -->
+          <div class="center">
+            <div class="scroll-words">
+              <a href="" class="words">
+                滚动文字滚动文字滚动文字滚动文字滚动文字滚动文字
+              </a>
+            </div>
+          </div>
+          <!-- 顶部中间 滚动 end -->
+         
+        </div>
+        <!-- 顶部 end -->
+        <!-- 彩票棋盘 start -->
+        <div class="block-wrap clearfix">
+          <div class="block float-l clearfix">
+            <div class="block-tit clearfix">
+                <span class="tit-l float-l">第129929299期</span>
+                <span class="tit-r float-r">飞盘 X 1</span>
+            </div>
+            <ul class="one-wrap ">
+                <li class="one float-l"><span>1</span></li>
+                <li class="one float-l active"><span>2</span></li>
+                <li class="one float-l"><span>3</span></li>
+                <li class="one float-l"><span>4</span></li>
+                <li class="one float-l active"><span>5</span></li>
+                <li class="one float-l"><span>6</span></li>
+                <li class="one float-l"><span>7</span></li>
+                <li class="one float-l active"><span>8</span></li>
+                <li class="one float-l"><span>9</span></li>
+                <li class="one float-l"><span>10</span></li>
+                <li class="one float-l"><span>11</span></li>
+                <li class="one float-l"><span>12</span></li>
+                <li class="one float-l"><span>13</span></li>
+                <li class="one float-l active"><span>14</span></li>
+                <li class="one float-l"><span>15</span></li>
+                <li class="one float-l"><span>16</span></li>
+                <li class="one float-l"><span>17</span></li>
+                <li class="one float-l"><span>18</span></li>
+                <li class="one float-l"><span>19</span></li>
+                <li class="one float-l active"><span>20</span></li>
+            </ul>
+          </div>
+          <div class="block float-l">
+            <div class="block-tit clearfix">
+                <span class="tit-l float-l">第129929299期</span>
+                <span class="tit-r float-r">飞盘 X 1</span>
+            </div>
+            <ul class="one-wrap ">
+                <li class="one float-l"><span>1</span></li>
+                <li class="one float-l active"><span>2</span></li>
+                <li class="one float-l"><span>3</span></li>
+                <li class="one float-l"><span>4</span></li>
+                <li class="one float-l active"><span>5</span></li>
+                <li class="one float-l"><span>6</span></li>
+                <li class="one float-l"><span>7</span></li>
+                <li class="one float-l active"><span>8</span></li>
+                <li class="one float-l"><span>9</span></li>
+                <li class="one float-l"><span>10</span></li>
+                <li class="one float-l"><span>11</span></li>
+                <li class="one float-l"><span>12</span></li>
+                <li class="one float-l"><span>13</span></li>
+                <li class="one float-l active"><span>14</span></li>
+                <li class="one float-l"><span>15</span></li>
+                <li class="one float-l"><span>16</span></li>
+                <li class="one float-l"><span>17</span></li>
+                <li class="one float-l"><span>18</span></li>
+                <li class="one float-l"><span>19</span></li>
+                <li class="one float-l active"><span>20</span></li>
+            </ul>
+          </div>
+          <div class="block float-l">
+            <div class="block-tit clearfix">
+                <span class="tit-l float-l">第129929299期</span>
+                <span class="tit-r float-r">飞盘 X 1</span>
+            </div>
+            <ul class="one-wrap ">
+                <li class="one float-l"><span>1</span></li>
+                <li class="one float-l active"><span>2</span></li>
+                <li class="one float-l"><span>3</span></li>
+                <li class="one float-l"><span>4</span></li>
+                <li class="one float-l active"><span>5</span></li>
+                <li class="one float-l"><span>6</span></li>
+                <li class="one float-l"><span>7</span></li>
+                <li class="one float-l active"><span>8</span></li>
+                <li class="one float-l"><span>9</span></li>
+                <li class="one float-l"><span>10</span></li>
+                <li class="one float-l"><span>11</span></li>
+                <li class="one float-l"><span>12</span></li>
+                <li class="one float-l"><span>13</span></li>
+                <li class="one float-l active"><span>14</span></li>
+                <li class="one float-l"><span>15</span></li>
+                <li class="one float-l"><span>16</span></li>
+                <li class="one float-l"><span>17</span></li>
+                <li class="one float-l"><span>18</span></li>
+                <li class="one float-l"><span>19</span></li>
+                <li class="one float-l active"><span>20</span></li>
+            </ul>
+          </div>
+          <div class="block float-l">
+                <div class="block-tit clearfix">
+                    <span class="tit-l float-l">第129929299期</span>
+                    <span class="tit-r float-r">飞盘 X 1</span>
+                </div>
+                <ul class="one-wrap ">
+                    <li class="one float-l"><span>1</span></li>
+                    <li class="one float-l active"><span>2</span></li>
+                    <li class="one float-l"><span>3</span></li>
+                    <li class="one float-l"><span>4</span></li>
+                    <li class="one float-l active"><span>5</span></li>
+                    <li class="one float-l"><span>6</span></li>
+                    <li class="one float-l"><span>7</span></li>
+                    <li class="one float-l active"><span>8</span></li>
+                    <li class="one float-l"><span>9</span></li>
+                    <li class="one float-l"><span>10</span></li>
+                    <li class="one float-l"><span>11</span></li>
+                    <li class="one float-l"><span>12</span></li>
+                    <li class="one float-l"><span>13</span></li>
+                    <li class="one float-l active"><span>14</span></li>
+                    <li class="one float-l"><span>15</span></li>
+                    <li class="one float-l"><span>16</span></li>
+                    <li class="one float-l"><span>17</span></li>
+                    <li class="one float-l"><span>18</span></li>
+                    <li class="one float-l"><span>19</span></li>
+                    <li class="one float-l active"><span>20</span></li>
+                </ul>
+              </div>
+        </div>
+        <!-- 彩票棋盘 end -->
+      </div>
+    </div>
+  </body>
+   <!--[if !IE]> -->
+
+   <script type="text/javascript">
+    window.jQuery ||
+      document.write(
+        "<script src='{{__HOST__}}/admin/js/jquery-2.0.3.min.js'>" +
+          "<" +
+          "script>"
+      );
+  </script>
+
+  <!-- <![endif]-->
+
+  <!--[if IE]>
+    <script type="text/javascript">
+      window.jQuery ||
+        document.write(
+          "<script src='{{__HOST__}}/admin/js/jquery-1.10.2.min.js'>" +
+            "<" +
+            "script>"
+        );
+    </script>
+  <![endif]-->
+
+  <script type="text/javascript">
+    if ("ontouchend" in document)
+      document.write(
+        "<script src='{{__HOST__}}/admin/js/jquery.mobile.custom.min.js'>" +
+          "<" +
+          "script>"
+      );
+  </script>
+    
+  <script type="text/javascript">
+
+        var num = 0;
+        function resetCss() {
+            var bodyW = $('body').width(),
+                $block = $(".block"),
+                $blockOne = $(".block .one"),
+                $oneSpan = $(".block .one span");
+            $block.css("width", bodyW / 3 - 2.7);
+            var blockOneW = ((bodyW / 3 - 2.7) /10) - 2;
+            $blockOne.css("width", blockOneW)
+                .css("height", blockOneW)
+                .css("border-radius", blockOneW / 2);
+            $oneSpan.css("marginTop", blockOneW / 2 - 12)
+        }
+        
+        resetCss();
+        $(window).resize(function(){
+          resetCss();
+        })
+        function goLeft() {
+            // 滚动宽度
+            var scrollW = $(".scroll-words").width();
+            if (num == -scrollW) {
+                num = 0;
+            }
+            num -= 1;
+            $(".scroll-words").css({
+                left: num
+            })
+        }
+        //设置滚动速度
+        var timer = setInterval(goLeft, 20);
+        //设置鼠标经过时滚动停止
+        $(".words").hover(function() {
+            clearInterval(timer);
+        },function() {
+            timer = setInterval(goLeft, 20);
+        })
+        
+       
+  </script>
+</html>

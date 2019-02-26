@@ -7,7 +7,8 @@ const Koa = require("koa"),
   bodyParser = require('koa-bodyparser'),
   index = require("./routes/index"),
   admin = require("./routes/admin"),
-  api = require("./routes/api");
+  api = require("./routes/api"),
+  caipiao = require("./routes/caipiao");
 
 
 const app = new Koa();
@@ -47,7 +48,7 @@ router.use(async (ctx, next)=>{
   if(ctx.session.userinfo) {
     await next();
   } else {
-    if(ctx.url == "/admin/login" || ctx.url == "/admin/login/doLogin") {
+    if(ctx.url == "/admin/login" || ctx.url == "/admin/login/doLogin" || ctx.url == "/caipiao") {
        await next();
     } else {
       ctx.redirect("/admin/login")
@@ -62,6 +63,8 @@ router.use(index);
 router.use("/admin", admin);
 
 router.use("/api", api);
+
+router.use("/caipiao", caipiao);
 
 
 app.use(router.routes()).use(router.allowedMethods())
